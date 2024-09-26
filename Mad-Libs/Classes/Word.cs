@@ -21,6 +21,7 @@ namespace Mad_Libs_App.Classes
 
         static Word()
         {
+            //examples is used to check if a word is a valid type
             Examples = new Dictionary<string, string>
             {
                 { "noun", "e.g., dog, flower or javelin" },
@@ -33,11 +34,13 @@ namespace Mad_Libs_App.Classes
                 { "place",  "e.g., house, street or bottomless pit"},
                 { "adv", "e.g., rabidly, suddenly or absurdly"},
                 { "prsn", "e.g., Elvis, George Washington or Dolly Parton"},
-                { "body", "e.g., nose, arm or weenis" },
+                { "body", "e.g., nose, arm or funny bone" },
                 { "pbody", "e.g., legs, eyes or toe nails"},
                 { "food", "e.g., pizza, salsa or chicken sandwich" },
                 { "exc", "e.g., ouch, geewhiz or golly" }
                 //add others as you need
+                //if you want to add a new type. when you add a new example,
+                //keep its key shortish and add them to ExtendType
             };
 
             ExtendType = new Dictionary<string, string>
@@ -53,7 +56,8 @@ namespace Mad_Libs_App.Classes
             };
         }
 
-        public string TypeExtend()
+        //makes short types into plain english
+        public string GetPrompt()
         {
             string str = Type;
             if (ExtendType.ContainsKey(Type)) { str = ExtendType[Type]; }

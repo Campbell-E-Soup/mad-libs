@@ -20,7 +20,7 @@ namespace Mad_Libs_App
             Replacer = madlib.Next();
             if (Replacer != null)
             {
-                lblPrompt.Text = Replacer.TypeExtend();
+                lblPrompt.Text = Replacer.GetPrompt();
                 lblReminder.Text = Word.Examples[Replacer.Type];
             }
         }
@@ -31,15 +31,17 @@ namespace Mad_Libs_App
             {
                 Replacer.Replace = txtWord.Text.Trim();
                 Replacer = madlib.Next();
+                //if list is NOT empty
                 if (Replacer != null)
                 {
-                    lblPrompt.Text = Replacer.TypeExtend();
+                    lblPrompt.Text = Replacer.GetPrompt();
                     lblReminder.Text = Word.Examples[Replacer.Type];
                     btnNext.Enabled = false;
                     txtWord.Text = string.Empty;
                 }
                 else
                 {
+                    //list is empty, story is complete
                     this.Hide();
                     madlib.Finish();
                     StoryForm storyForm = new StoryForm();

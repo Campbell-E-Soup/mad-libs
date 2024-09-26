@@ -28,6 +28,7 @@ namespace Mad_Libs_App.Classes
                 word = WordList[index];
                 index++;
             }
+            //return next word
             return word;
         }
         public void Load()
@@ -39,6 +40,7 @@ namespace Mad_Libs_App.Classes
             {
                 if (word.Contains('['))
                 {
+                    //use all types in examples to determine the bracketed word is valid
                     foreach (string type in Word.Examples.Keys)
                     {
                         if (word.Contains($"[{type}]"))
@@ -54,6 +56,7 @@ namespace Mad_Libs_App.Classes
         public void Finish()
         {
             //creates finished story
+            //add or remove from array to change what will stay when [word] is replaced
             char[] puncEnd = {'.',',',':',';','?','!',')'};
             char[] puncStart = { '"', '\'', '(' };
             string[] words = Story.Split(' ');
@@ -62,10 +65,13 @@ namespace Mad_Libs_App.Classes
             {
                 if (WordList.Count > 0)
                 {
+                    //looping through story in the same order as we created wordlist, so the oldest will always be at zero.
                     if (words[i].Contains($"[{WordList[0].Type}]"))
                     {
                         string suffix = "", prefix = "";
                         string str = words[i];
+
+                        //beginning punc.
                         if (!str.StartsWith('['))
                         {
                             int begin = str.IndexOf('[');
@@ -74,7 +80,7 @@ namespace Mad_Libs_App.Classes
                                 if (puncStart.Contains(c)) { prefix += c; }
                             }
                         }
-
+                        //end punc.
                         if (!str.EndsWith(']'))
                         {
                             int end = str.IndexOf(']');
@@ -97,6 +103,7 @@ namespace Mad_Libs_App.Classes
                             string r = WordList[0].Replace;
                             WordList[0].Replace = Char.ToUpper(r[0]).ToString() + r.Substring(1);
                         }
+                        //pop
                         words[i] = prefix + WordList[0].Replace + suffix;
                         WordList.RemoveAt(0);
                     }
