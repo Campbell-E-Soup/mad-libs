@@ -40,9 +40,11 @@ namespace Mad_Libs_App
                 }
                 else
                 {
+                    this.Hide();
                     madlib.Finish();
                     StoryForm storyForm = new StoryForm();
                     storyForm.Tag = madlib.FinishedStory;
+                    storyForm.Closed += (s, args) => this.Close();
                     storyForm.Show();
                 }
             }

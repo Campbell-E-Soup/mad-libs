@@ -34,7 +34,7 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(485, 316);
+            btnExit.Location = new Point(481, 316);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(94, 29);
             btnExit.TabIndex = 0;
@@ -64,6 +64,8 @@
             ClientSize = new Size(610, 357);
             Controls.Add(lblStory);
             Controls.Add(btnExit);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "StoryForm";
             Text = "Story";
             Load += Story_Load;
