@@ -65,7 +65,7 @@ namespace Mad_Libs_App.Classes
             {
                 if (WordList.Count > 0)
                 {
-                    //looping through story in the same order as we created wordlist, so the oldest will always be at zero.
+                    //looping through story in the same order as we created wordlist, so the oldest word in the list will always be at zero.
                     if (words[i].Contains($"[{WordList[0].Type}]"))
                     {
                         string suffix = "", prefix = "";
