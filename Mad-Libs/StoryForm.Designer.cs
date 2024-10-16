@@ -30,13 +30,15 @@
         {
             btnExit = new Button();
             lblStory = new Label();
+            btnCopy = new Button();
             SuspendLayout();
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(481, 316);
+            btnExit.Location = new Point(421, 237);
+            btnExit.Margin = new Padding(3, 2, 3, 2);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(94, 29);
+            btnExit.Size = new Size(82, 22);
             btnExit.TabIndex = 0;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
@@ -48,23 +50,35 @@
             lblStory.BorderStyle = BorderStyle.Fixed3D;
             lblStory.FlatStyle = FlatStyle.Flat;
             lblStory.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblStory.Location = new Point(35, 35);
-            lblStory.Margin = new Padding(60, 30, 60, 30);
+            lblStory.Location = new Point(31, 26);
+            lblStory.Margin = new Padding(52, 22, 52, 22);
             lblStory.Name = "lblStory";
-            lblStory.Padding = new Padding(30);
-            lblStory.Size = new Size(540, 270);
+            lblStory.Padding = new Padding(26, 22, 26, 22);
+            lblStory.Size = new Size(472, 202);
             lblStory.TabIndex = 1;
             lblStory.Text = "Story";
             lblStory.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // btnCopy
+            // 
+            btnCopy.Location = new Point(340, 237);
+            btnCopy.Name = "btnCopy";
+            btnCopy.Size = new Size(75, 23);
+            btnCopy.TabIndex = 2;
+            btnCopy.Text = "Copy";
+            btnCopy.UseVisualStyleBackColor = true;
+            btnCopy.Click += btnCopy_Click;
+            // 
             // StoryForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(610, 357);
+            ClientSize = new Size(534, 268);
+            Controls.Add(btnCopy);
             Controls.Add(lblStory);
             Controls.Add(btnExit);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "StoryForm";
             Text = "Story";
@@ -76,5 +90,6 @@
 
         private Button btnExit;
         private Label lblStory;
+        private Button btnCopy;
     }
 }
