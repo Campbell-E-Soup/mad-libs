@@ -26,5 +26,10 @@ namespace Mad_Libs_App
         {
             this.Close();
         }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(lblStory.Text);
+        }
     }
 }
