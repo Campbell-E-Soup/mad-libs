@@ -1,0 +1,3 @@
+﻿﻿{Tag,SecondTag,   wooah spaces-- we can handle spaces   , and SYmBols!!!!^&^$$$}Hello this is a string we have words you can replace such as this [noun]! We might even have tags!
+oooooooooo we can even handle multiple lines!!!!
+TODO add story class.
