@@ -18,7 +18,19 @@ namespace Mad_Libs_App.Classes.Stories
 			{
 				Stories.Add(new Story(str));
 			}
-			MessageBox.Show(this.ToString());
+			//MessageBox.Show(this.ToString());
+		}
+
+		public StoryList(string path)
+		{
+			Stories = new List<Story>();
+			List<string> stringList = IOSystem.GetAllStrings(path);
+
+			foreach (string str in stringList)
+			{
+				Stories.Add(new Story(str));
+			}
+			//MessageBox.Show(this.ToString());
 		}
 
 		public override string ToString()
