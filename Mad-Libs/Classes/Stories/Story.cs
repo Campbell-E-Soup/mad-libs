@@ -24,7 +24,10 @@ namespace Mad_Libs_App.Classes.Stories
 				foreach (string t in allTags.Split(','))
 				{
 					string tag = t.Trim();
-					Tags.Add(tag);
+					if (!Tags.Contains(tag))
+					{
+						Tags.Add(tag);
+					}
 				}
 			}
 			Str = line.Trim();

@@ -1,5 +1,5 @@
 ﻿﻿{Tag,SecondTag,   wooah spaces-- we can handle spaces   , and SYmBols!!!!^&^$$$}Hello this is a string we have words you can replace such as this [noun]! We might even have tags!
 oooooooooo we can even handle multiple lines!!!!
 {Done!}TODO add story class.
-{Tag, Tag but with spaces    , nothing} Generic Madlib [verb]
+{Tag, Tag but with spaces    , Tag } Generic Madlib [verb]
 {Tag} only one tag called Tag
