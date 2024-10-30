@@ -31,5 +31,29 @@ namespace Mad_Libs_App
         {
             Clipboard.SetText(lblStory.Text);
         }
+
+        private void DownloadButton_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text Files (*.txt)|*.txt";
+
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            saveFileDialog.FileName
+         = "finished_story.txt";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    File.WriteAllText(saveFileDialog.FileName, lblStory.Text);
+                    MessageBox.Show("Story saved successfully!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error saving the story: " + ex.Message);
+                }
+            }
+        }
+
     }
 }

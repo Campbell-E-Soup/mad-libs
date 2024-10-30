@@ -31,6 +31,7 @@
             btnExit = new Button();
             lblStory = new Label();
             btnCopy = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // btnExit
@@ -69,11 +70,22 @@
             btnCopy.UseVisualStyleBackColor = true;
             btnCopy.Click += btnCopy_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(201, 237);
+            button1.Name = "button1";
+            button1.Size = new Size(133, 23);
+            button1.TabIndex = 3;
+            button1.Text = "Download to Deskop";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += DownloadButton_Click;
+            // 
             // StoryForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(534, 268);
+            Controls.Add(button1);
             Controls.Add(btnCopy);
             Controls.Add(lblStory);
             Controls.Add(btnExit);
@@ -91,5 +103,6 @@
         private Button btnExit;
         private Label lblStory;
         private Button btnCopy;
+        private Button button1;
     }
 }
