@@ -38,13 +38,19 @@ namespace Mad_Libs_App
             saveFileDialog.Filter = "Text Files (*.txt)|*.txt";
 
             //saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string filePath = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "Text Files");
+            string filePath;
+            filePath = Path.Combine(AppContext.BaseDirectory, "Text Files");
             if (!Directory.Exists(filePath))
             {
-                filePath = Path.Combine(AppContext.BaseDirectory, "Text Files");
+                filePath = Path.Combine(AppContext.BaseDirectory, "..", "..","..", "Text Files");
+                if (!Directory.Exists(filePath))
+                {
+                    filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                }
             }
             saveFileDialog.InitialDirectory = filePath;
-            saveFileDialog.FileName = "finished_story.txt";
+            MessageBox.Show(filePath);
+            saveFileDialog.FileName = "saved_madlib.txt";
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {

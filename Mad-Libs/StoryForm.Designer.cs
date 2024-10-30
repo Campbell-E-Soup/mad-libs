@@ -72,11 +72,11 @@
             // 
             // button1
             // 
-            button1.Location = new Point(201, 237);
+            button1.Location = new Point(261, 237);
             button1.Name = "button1";
-            button1.Size = new Size(133, 23);
+            button1.Size = new Size(73, 23);
             button1.TabIndex = 3;
-            button1.Text = "Download to Deskop";
+            button1.Text = "Download";
             button1.UseVisualStyleBackColor = true;
             button1.Click += DownloadButton_Click;
             // 
