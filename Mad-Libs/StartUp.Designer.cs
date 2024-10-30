@@ -31,28 +31,33 @@
 			btnPlay = new Button();
 			btnCreate = new Button();
 			lblSort = new Label();
-			comboBox1 = new ComboBox();
+			cboSortBy = new ComboBox();
 			btnLoad = new Button();
 			lblTitle = new Label();
+			lblTooltip = new Label();
 			SuspendLayout();
 			// 
 			// btnPlay
 			// 
-			btnPlay.Location = new Point(275, 167);
+			btnPlay.Location = new Point(275, 195);
 			btnPlay.Name = "btnPlay";
 			btnPlay.Size = new Size(94, 29);
 			btnPlay.TabIndex = 0;
 			btnPlay.Text = "Play!";
 			btnPlay.UseVisualStyleBackColor = true;
+			btnPlay.Click += btnPlay_Click;
+			btnPlay.MouseEnter += btnPlay_MouseEnter;
 			// 
 			// btnCreate
 			// 
-			btnCreate.Location = new Point(28, 167);
+			btnCreate.Location = new Point(28, 195);
 			btnCreate.Name = "btnCreate";
 			btnCreate.Size = new Size(94, 29);
 			btnCreate.TabIndex = 1;
 			btnCreate.Text = "Create";
 			btnCreate.UseVisualStyleBackColor = true;
+			btnCreate.Click += btnCreate_Click;
+			btnCreate.MouseEnter += btnCreate_MouseEnter;
 			// 
 			// lblSort
 			// 
@@ -63,13 +68,14 @@
 			lblSort.TabIndex = 2;
 			lblSort.Text = "Sort By Tag:";
 			// 
-			// comboBox1
+			// cboSortBy
 			// 
-			comboBox1.FormattingEnabled = true;
-			comboBox1.Location = new Point(28, 84);
-			comboBox1.Name = "comboBox1";
-			comboBox1.Size = new Size(151, 28);
-			comboBox1.TabIndex = 3;
+			cboSortBy.FormattingEnabled = true;
+			cboSortBy.Location = new Point(28, 84);
+			cboSortBy.Name = "cboSortBy";
+			cboSortBy.Size = new Size(248, 28);
+			cboSortBy.TabIndex = 3;
+			cboSortBy.MouseEnter += cboSortBy_MouseEnter;
 			// 
 			// btnLoad
 			// 
@@ -79,30 +85,43 @@
 			btnLoad.TabIndex = 4;
 			btnLoad.Text = ". . .";
 			btnLoad.UseVisualStyleBackColor = true;
+			btnLoad.Click += btnLoad_Click;
+			btnLoad.MouseEnter += btnLoad_MouseEnter;
 			// 
 			// lblTitle
 			// 
 			lblTitle.AutoSize = true;
 			lblTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-			lblTitle.Location = new Point(121, 9);
+			lblTitle.Location = new Point(125, 20);
 			lblTitle.Name = "lblTitle";
-			lblTitle.Size = new Size(143, 28);
+			lblTitle.Size = new Size(141, 28);
 			lblTitle.TabIndex = 5;
-			lblTitle.Text = "Mad-Libs App";
+			lblTitle.Text = "Mad Libs App";
+			// 
+			// lblTooltip
+			// 
+			lblTooltip.Location = new Point(28, 128);
+			lblTooltip.Name = "lblTooltip";
+			lblTooltip.Size = new Size(341, 51);
+			lblTooltip.TabIndex = 6;
+			lblTooltip.Text = "Tooltip";
+			lblTooltip.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// StartUp
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(394, 220);
+			ClientSize = new Size(394, 239);
+			Controls.Add(lblTooltip);
 			Controls.Add(lblTitle);
 			Controls.Add(btnLoad);
-			Controls.Add(comboBox1);
+			Controls.Add(cboSortBy);
 			Controls.Add(lblSort);
 			Controls.Add(btnCreate);
 			Controls.Add(btnPlay);
 			Name = "StartUp";
-			Text = "StartUp";
+			Text = "Mad Libs";
+			Load += StartUp_Load;
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -112,8 +131,9 @@
 		private Button btnPlay;
 		private Button btnCreate;
 		private Label lblSort;
-		private ComboBox comboBox1;
+		private ComboBox cboSortBy;
 		private Button btnLoad;
 		private Label lblTitle;
+		private Label lblTooltip;
 	}
 }
