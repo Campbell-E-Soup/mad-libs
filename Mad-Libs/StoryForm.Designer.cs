@@ -56,6 +56,7 @@
             lblStory.TabIndex = 1;
             lblStory.Text = "Story";
             lblStory.TextAlign = ContentAlignment.MiddleCenter;
+            lblStory.Click += lblStory_Click;
             // 
             // StoryForm
             // 

@@ -32,6 +32,7 @@
             btnNext = new Button();
             txtWord = new TextBox();
             lblReminder = new Label();
+            new_story = new Button();
             SuspendLayout();
             // 
             // lblPrompt
@@ -73,12 +74,23 @@
             lblReminder.Text = "Reminder";
             lblReminder.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // new_story
+            // 
+            new_story.Location = new Point(102, 208);
+            new_story.Name = "new_story";
+            new_story.Size = new Size(175, 29);
+            new_story.TabIndex = 4;
+            new_story.Text = "make a new story";
+            new_story.UseVisualStyleBackColor = true;
+            new_story.Click += new_story_Click;
+            // 
             // Prompts
             // 
             AcceptButton = btnNext;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(375, 214);
+            ClientSize = new Size(384, 283);
+            Controls.Add(new_story);
             Controls.Add(lblReminder);
             Controls.Add(txtWord);
             Controls.Add(btnNext);
@@ -98,5 +110,6 @@
         private Button btnNext;
         private TextBox txtWord;
         private Label lblReminder;
+        private Button new_story;
     }
 }

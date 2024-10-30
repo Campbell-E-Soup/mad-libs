@@ -54,8 +54,8 @@ namespace Mad_Libs_App
 
         private bool answerValidation(string s)
         {
-            if (!Regex.IsMatch(s, @"^[a-zA-Z\s]+$")) {return false; }
-            if (s.Count(char.IsLetter) < 3) {return false; }
+            if (!Regex.IsMatch(s, @"^[a-zA-Z\s]+$")) { return false; }
+            if (s.Count(char.IsLetter) < 3) { return false; }
 
             return true;
         }
@@ -67,9 +67,18 @@ namespace Mad_Libs_App
                 btnNext.Enabled = true;
             }
             else
-            { 
+            {
                 btnNext.Enabled = false;
             }
+        }
+
+        // this is just to open the new_story (form1) window
+        private void new_story_Click(object sender, EventArgs e)
+        { 
+            
+            make_text Q = new make_text();
+           Q.Show();
+           
         }
     }
 }

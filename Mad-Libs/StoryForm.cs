@@ -26,5 +26,10 @@ namespace Mad_Libs_App
         {
             this.Close();
         }
+
+        private void lblStory_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
