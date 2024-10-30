@@ -37,13 +37,8 @@ namespace Mad_Libs_App
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Text Files (*.txt)|*.txt";
 
-            //saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string filePath = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "Text Files");
-            if (!File.Exists(filePath))
-            {
-                filePath = Path.Combine(AppContext.BaseDirectory, "Text Files");
-            }
-            saveFileDialog.InitialDirectory = filePath;
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
             saveFileDialog.FileName = "finished_story.txt";
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
