@@ -23,6 +23,7 @@ namespace Mad_Libs_App
 		//TODO: ADD LINQ
 		private List<Story> SortStoriesByTag()
 		{
+			//sort by this
 			string tag = cboSortBy.Items[cboSortBy.SelectedIndex].ToString();
 			//this returns a list of Stories as to not overwrite the loaded stories, we just want to 
 			//sort not replace.
@@ -30,7 +31,6 @@ namespace Mad_Libs_App
 			//if not filtering by tag, return the default storylist
 			if (tag == notSorted)
 			{
-				//break out of method
 				return Stories.Stories;
 			}
 			else
