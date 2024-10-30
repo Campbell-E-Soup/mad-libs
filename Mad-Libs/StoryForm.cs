@@ -38,7 +38,6 @@ namespace Mad_Libs_App
             saveFileDialog.Filter = "Text Files (*.txt)|*.txt";
 
             //saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            //this works once the app is built and published, so it won't work now, but it WILL work.
             string filePath;
             filePath = Path.Combine(AppContext.BaseDirectory, "Text Files");
             if (!Directory.Exists(filePath))
@@ -50,7 +49,6 @@ namespace Mad_Libs_App
                 }
             }
             saveFileDialog.InitialDirectory = filePath;
-            MessageBox.Show(filePath);
             saveFileDialog.FileName = "saved_madlib.txt";
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
