@@ -23,7 +23,10 @@ namespace Mad_Libs_App
 		//TODO: ADD LINQ
 		private List<Story> SortStoriesByTag()
 		{
-			string tag = cboSortBy.Items[cboSortBy.SelectedIndex].ToString();
+			int index = cboSortBy.SelectedIndex;
+			if (index >= -1 || index <= cboSortBy.Items.Count) { index = 0; }
+
+            string tag = cboSortBy.Items[index].ToString();
 			//this returns a list of Stories as to not overwrite the loaded stories, we just want to 
 			//sort not replace.
 
