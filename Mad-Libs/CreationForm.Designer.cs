@@ -45,6 +45,7 @@
             // cboAdd
             // 
             cboAdd.FormattingEnabled = true;
+            cboAdd.Items.AddRange(new object[] { "[adj]", "[noun]", "[verb]", "[ving]", "[adv]", "[place]", "[person]", "[pnoun]", "[pname]", "[color]", "[body]", "[pbody]", "[food]", "[exc]" });
             cboAdd.Location = new Point(12, 298);
             cboAdd.Name = "cboAdd";
             cboAdd.Size = new Size(151, 28);
@@ -79,7 +80,7 @@
             Controls.Add(cboAdd);
             Controls.Add(txtStory);
             Name = "CreationForm";
-            Text = "CreationForm";
+            Text = "Create a MadLib!";
             ResumeLayout(false);
             PerformLayout();
         }

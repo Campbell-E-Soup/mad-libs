@@ -89,7 +89,9 @@ namespace Mad_Libs_App
 				string str = stories[rand.Next(stories.Count)].Str;
 				Prompts prmpt = new Prompts();
 				prmpt.Tag = str;
-				prmpt.Show();
+                this.Hide();
+                prmpt.Closed += (s, args) => this.Show();
+                prmpt.Show();
 			}
 			else
 			{
@@ -127,7 +129,9 @@ namespace Mad_Libs_App
 		private void btnCreate_Click(object sender, EventArgs e)
 		{
 			CreationForm creationForm = new CreationForm();
-			creationForm.ShowDialog();
+			this.Hide();
+            creationForm.Closed += (s, args) => this.Show();
+            creationForm.ShowDialog();
 		}
 
 		/* | tooltips |
