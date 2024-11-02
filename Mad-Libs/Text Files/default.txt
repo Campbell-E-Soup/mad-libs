@@ -3,3 +3,4 @@ oooooooooo we can even handle multiple lines!!!!
 {Done!}TODO add story class.
 {Tag, Tag but with spaces    , Tag } Generic Madlib [verb]
 {Tag} only one tag called Tag
+{Very distinct tag} A very [adj] and distinct mad-lib.
