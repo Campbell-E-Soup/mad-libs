@@ -24,6 +24,7 @@ namespace Mad_Libs_App.Classes
 				StreamReader sr = new StreamReader(filePath);
 				string? o = sr.ReadLine();
 				if (o != null) output = o;
+				sr.Close();
 			}
 			catch (Exception ex)
 			{
@@ -41,6 +42,8 @@ namespace Mad_Libs_App.Classes
 				StreamReader sr = new StreamReader(filePath);
 				string? o = sr.ReadLine();
 				if (o != null) output = o;
+				sr.Close();
+				//just realised that we need to close streamreaders in order to avoid leaks.
 			}
 			catch (Exception ex)
 			{
@@ -68,6 +71,7 @@ namespace Mad_Libs_App.Classes
 					output.Add(o);
 					o = sr.ReadLine();
 				}
+				sr.Close();
 			}
 			catch (Exception ex)
 			{
@@ -89,6 +93,7 @@ namespace Mad_Libs_App.Classes
 					output.Add(o);
 					o = sr.ReadLine();
 				}
+				sr.Close();
 			}
 			catch (Exception ex)
 			{
@@ -97,5 +102,38 @@ namespace Mad_Libs_App.Classes
 			}
 			return output;
 		}
-	}
+		public static bool AppendToFile(string filePath, string appendLine)
+		{ //returns true if successfully saved, false otherwise
+			try
+			{
+				StreamWriter sw = new StreamWriter(filePath, true);
+				sw.WriteLine(appendLine);
+				sw.Close();
+				return true;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+			return false;
+		}
+        public static bool AppendListToFile(string filePath, List<string> appendList)
+        { //returns true if successfully saved, false otherwise
+            try
+            {
+                StreamWriter sw = new StreamWriter(filePath, true);
+				foreach (string line in appendList)
+				{
+                    sw.WriteLine(line);
+                }
+                sw.Close();
+				return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return false;
+        }
+    }
 }
