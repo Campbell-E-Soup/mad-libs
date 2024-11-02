@@ -79,6 +79,7 @@
             Controls.Add(btnSave);
             Controls.Add(cboAdd);
             Controls.Add(txtStory);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "CreationForm";
             Text = "Create a MadLib!";
             ResumeLayout(false);
