@@ -126,7 +126,8 @@ namespace Mad_Libs_App
 		}
 		private void btnCreate_Click(object sender, EventArgs e)
 		{
-			//for later
+			CreationForm creationForm = new CreationForm();
+			creationForm.ShowDialog();
 		}
 
 		/* | tooltips |
