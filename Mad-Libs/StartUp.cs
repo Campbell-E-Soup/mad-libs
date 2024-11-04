@@ -24,7 +24,7 @@ namespace Mad_Libs_App
 		private List<Story> SortStoriesByTag()
 		{
 			int index = cboSortBy.SelectedIndex;
-			if (index >= -1 || index <= cboSortBy.Items.Count) { index = 0; }
+			if (index <= -1 || index >= cboSortBy.Items.Count) { index = 0; }
 
             string tag = cboSortBy.Items[index].ToString();
 			//this returns a list of Stories as to not overwrite the loaded stories, we just want to 
@@ -39,10 +39,11 @@ namespace Mad_Libs_App
 			else
 			{
 				List<Story> stories = Stories.Stories;
+				var filteredStories = Stories.Stories.Where(s => s.Tags.Contains(tag)).ToList();
 				///THIS IS WHERE LINQ SHOULD GO.
 				//This return should return the sorted list stored in a new variable
 				//other than stories.
-				return stories;
+				return filteredStories;
 			}
 		}
 
