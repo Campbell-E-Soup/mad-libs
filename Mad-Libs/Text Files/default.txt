@@ -5,7 +5,6 @@ oooooooooo we can even handle multiple lines!!!!
 {Tag} only one tag called Tag
 {Very distinct tag} A very [adj] and distinct mad-lib.
 
-////to be added to str = "Plural Color: [pcolor], Age: [age], Number: [num], Place: [place], Drink: [drink], Job: [job], Candy: [candy], Animal: [animal], Greeting: [greeting], Vs: [vs]";
 
 {General, Sky Surprise} One [adj] day, I was walking my [color] pet [noun] when [pnoun] started flying from the sky! I called my friend [name] and she said one just landed right on her [place]! [adv], it was raining [pnoun] as well and they were just going everywhere! My [noun] started [ving] and catching [pnoun] with his mouth to eat! 
 
