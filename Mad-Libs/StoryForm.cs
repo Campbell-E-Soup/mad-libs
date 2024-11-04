@@ -20,6 +20,7 @@ namespace Mad_Libs_App
         private void Story_Load(object sender, EventArgs e)
         {
             if (Tag != null) { lblStory.Text = Tag.ToString(); }
+            lblMessage.Text = string.Empty;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -30,6 +31,8 @@ namespace Mad_Libs_App
         private void btnCopy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(lblStory.Text);
+            lblMessage.ForeColor = SystemColors.ControlDark;
+            lblMessage.Text = "Story copied to clipboard!";
         }
 
         private void DownloadButton_Click(object sender, EventArgs e)
@@ -56,11 +59,13 @@ namespace Mad_Libs_App
                 try
                 {
                     File.WriteAllText(saveFileDialog.FileName, lblStory.Text);
-                    MessageBox.Show("Story saved successfully!");
+                    lblMessage.ForeColor = SystemColors.ControlDark;
+                    lblMessage.Text = "Story saved successfully!";
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error saving the story: " + ex.Message);
+                    lblMessage.ForeColor = Color.Red;
+                    lblMessage.Text = "Error saving the story: " + ex.Message;
                 }
             }
         }
