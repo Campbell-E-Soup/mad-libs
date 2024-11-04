@@ -1,23 +1,8 @@
-﻿﻿{Tag,SecondTag,   wooah spaces-- we can handle spaces   , and SYmBols!!!!^&^$$$}Hello this is a string we have words you can replace such as this [noun]! We might even have tags!
-oooooooooo we can even handle multiple lines!!!!
-{Done!}TODO add story class.
-{Tag, Tag but with spaces    , Tag } Generic Madlib [verb]
-{Tag} only one tag called Tag
-{Very distinct tag} A very [adj] and distinct mad-lib.
-
-
-{General, Sky Surprise} One [adj] day, I was walking my [color] pet [noun] when [pnoun] started flying from the sky! I called my friend [name] and she said one just landed right on her [place]! [adv], it was raining [pnoun] as well and they were just going everywhere! My [noun] started [ving] and catching [pnoun] with his mouth to eat! 
-
+{General, Sky Surprise} One [adj] day, I was walking my [color] pet [noun] when [pnoun] started flying from the sky! I called my friend [name] and she said one just landed right on her [place]! [adv], it was raining [pnoun] as well and they were just going everywhere! My [noun] started [ving] and catching [pnoun] with his mouth to eat!
 {General, How to do laundry} In order to do your laundry, first you have to [verb] your clothes. Then you have [verb] the [noun] machine. Take your time not to [verb] any items that may be gross. Separate your [pnoun] from your [pnoun] and then load the [noun] machine. Make sure not to mix the [color] with the [color]. Set temperature to [num] and begin the cycle. After that is finished, [verb] your clothes and [verb] them in the dryer. Set the temperature and [verb] the dryer. After about 1000 minutes, it should be complete! Now all you have to do is [verb] your clothes and you are all set! [adj] laundry!
-
 {Christmas, Christmas Morning} On Christmas morning, I woke up to find a [adj] [noun] under the tree. I rushed to open it and saw [pnoun] inside! My [prsn] shouted, "[exc]!" as we all began [ving] with joy. Later, we had a feast of [food] and sang [pnoun] around the fireplace.
-
 {Christmas, The Christmas Catastrophy} On a [adj] Christmas morning, I discovered that my [color] pet [food] had unwrapped all the presents! There were [pnoun] everywhere, and my [name] was yelling, "[exc]!" Just then, my [adj] neighbor [name] showed up with a [noun] to help clean up the mess. We ended up [ving] in the living room while my pet was busy [ving] with the [pnoun]!
-
 {Christmas, The Christmas Party} At the [adj] Christmas party, everyone brought their favorite [food] to share. I arrived with a huge plate of [pnoun] that my [noun] made. When I walked in, [prsn] was singing very [adv], making everyone [verb] with laughter. Suddenly, the lights went out, and we all yelled, "[exc]!" It turned out my [adj] cousin accidentally unplugged the tree while trying to grab a [noun]!
-
 {Halloween, The Haunted House Adventure} On Halloween night, [name] and their group of [pnoun] decided to visit the creepy old [place] at the end of the street. As they entered, a [adj] [color] light flickered from the ceiling, and they heard [Prsn] [ving] in the distance. "[exc]!" [name] yelled, grabbing their [body] in fright. Suddenly, a ghostly figure floated past, holding a plate of [food] and waving its [pbody]. They all ran out [adv], promising never to return!
-
 {Halloween, Shadows and Surprises} One [adj] Halloween night, I spotted a [color] [noun] creeping through the shadows when [pnoun] suddenly started popping up out of the ground! I called my friend [name], and he said one just appeared in his [place]! [adv], the [pnoun] were scattering everywhere, filling the air! My [noun] started [ving] and chasing the [pnoun] all over the yard!
-
 {Halloween, The Midnight Visitor} One [adj] Halloween night, [name] was alone in their [place] when a [color] shadow passed by the window, followed by a slow [verb] on the door. Heart racing, they heard [pnoun] [ving] down the hall. [name] opened the door [Adv] and saw [prsn], holding a strange [noun] and laughing as their [pbody] glowed in the moonlight—then they vanished, leaving only a trail of [food] crumbs.

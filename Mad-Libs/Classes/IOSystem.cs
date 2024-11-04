@@ -23,7 +23,11 @@ namespace Mad_Libs_App.Classes
 			{
 				StreamReader sr = new StreamReader(filePath);
 				string? o = sr.ReadLine();
-				if (o != null) output = o;
+				if (o != null)
+				{
+					o = o.Replace("#br#", "\n"); output = o;
+				}
+				sr.Close();
 			}
 			catch (Exception ex)
 			{
@@ -40,7 +44,9 @@ namespace Mad_Libs_App.Classes
 			{
 				StreamReader sr = new StreamReader(filePath);
 				string? o = sr.ReadLine();
-				if (o != null) output = o;
+                if (o != null) { o = o.Replace("#br#", "\n");  output = o; }
+				sr.Close();
+				//just realised that we need to close streamreaders in order to avoid leaks.
 			}
 			catch (Exception ex)
 			{
@@ -65,9 +71,11 @@ namespace Mad_Libs_App.Classes
 				string? o = sr.ReadLine();
 				while (o != null)
 				{
+					o = o.Replace("#br#","\n");
 					output.Add(o);
 					o = sr.ReadLine();
 				}
+				sr.Close();
 			}
 			catch (Exception ex)
 			{
@@ -86,9 +94,11 @@ namespace Mad_Libs_App.Classes
 				string? o = sr.ReadLine();
 				while (o != null)
 				{
-					output.Add(o);
+                    o = o.Replace("#br#", "\n");
+                    output.Add(o);
 					o = sr.ReadLine();
 				}
+				sr.Close();
 			}
 			catch (Exception ex)
 			{
@@ -97,5 +107,58 @@ namespace Mad_Libs_App.Classes
 			}
 			return output;
 		}
-	}
+		public static bool AppendToFile(string filePath, string appendLine)
+		{ //returns true if successfully saved, false otherwise
+			try
+			{
+				StreamWriter sw = new StreamWriter(filePath, true);
+                bool fileHasContent = File.Exists(filePath) && new FileInfo(filePath).Length > 0;
+                appendLine = appendLine.Replace(Environment.NewLine, "#br#").Replace("\n", "#br#").Replace("\r", "#br#");
+				if (fileHasContent)
+				{
+					appendLine = Environment.NewLine + appendLine;
+				}
+                sw.Write(appendLine);
+				sw.Close();
+				return true;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+			return false;
+		}
+        public static bool AppendListToFile(string filePath, List<string> appendList)
+        { //returns true if successfully saved, false otherwise
+            try
+            {
+                StreamWriter sw = new StreamWriter(filePath, true);
+                bool fileHasContent = File.Exists(filePath) && new FileInfo(filePath).Length > 0;
+                
+                foreach (string line in appendList)
+				{
+					string ln = line.Replace(Environment.NewLine, "#br#").Replace("\n", "#br#").Replace("\r", "#br#"); ;
+					if (appendList[0] == line )
+					{ 
+                        if (fileHasContent)
+                        {
+                            ln = Environment.NewLine + ln;
+                        }
+                    }
+					else
+					{
+                        ln = Environment.NewLine + ln;
+                    }
+                    sw.WriteLine(ln);
+                }
+                sw.Close();
+				return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return false;
+        }
+    }
 }
