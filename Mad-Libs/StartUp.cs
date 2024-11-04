@@ -24,17 +24,10 @@ namespace Mad_Libs_App
 		private List<Story> SortStoriesByTag()
 		{
 
-			//sort by this
-			string tag = cboSortBy.Items[cboSortBy.SelectedIndex].ToString();
-
-			int index = cboSortBy.SelectedIndex;
-			if (index <= -1 || index >= cboSortBy.Items.Count) { index = 0; }
-
-            //string tag = cboSortBy.Items[index].ToString();
-			//this returns a list of Stories as to not overwrite the loaded stories, we just want to 
-			//sort not replace.
-
-			//if not filtering by tag, return the default storylist
+            //sort by this
+            int index = cboSortBy.SelectedIndex;
+            if (index <= -1 || index >= cboSortBy.Items.Count) { index = 0; }
+            string tag = cboSortBy.Items[index].ToString();
 			if (tag == notSorted)
 			{
 				return Stories.Stories;
@@ -43,9 +36,6 @@ namespace Mad_Libs_App
 			{
 				List<Story> stories = Stories.Stories;
 				var filteredStories = Stories.Stories.Where(s => s.Tags.Contains(tag)).ToList();
-				///THIS IS WHERE LINQ SHOULD GO.
-				//This return should return the sorted list stored in a new variable
-				//other than stories.
 				return filteredStories;
 			}
 		}

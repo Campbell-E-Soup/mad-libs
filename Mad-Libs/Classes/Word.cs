@@ -37,7 +37,8 @@ namespace Mad_Libs_App.Classes
                 { "body", "e.g., nose, arm or funny bone" },
                 { "pbody", "e.g., legs, eyes or toe nails"},
                 { "food", "e.g., pizza, salsa or chicken sandwich" },
-                { "exc", "e.g., ouch, geewhiz or golly" }
+                { "exc", "e.g., ouch, geewhiz or golly" },
+                { "num", "e.g. 10, five, the largest known prime number" }
                 //add others as you need
                 //if you want to add a new type. when you add a new example,
                 //keep its key shortish and add them to ExtendType
@@ -52,7 +53,8 @@ namespace Mad_Libs_App.Classes
                 {"prsn", "person" },
                 {"body", "body part" },
                 {"pbody", "plural body part" },
-                {"exc", "exclamation" }
+                {"exc", "exclamation" },
+                {"num", "number" }
             };
         }
 

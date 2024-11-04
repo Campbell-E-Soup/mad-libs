@@ -37,10 +37,9 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(421, 237);
-            btnExit.Margin = new Padding(3, 2, 3, 2);
+            btnExit.Location = new Point(600, 388);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(82, 22);
+            btnExit.Size = new Size(94, 29);
             btnExit.TabIndex = 0;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
@@ -52,20 +51,21 @@
             lblStory.BorderStyle = BorderStyle.Fixed3D;
             lblStory.FlatStyle = FlatStyle.Flat;
             lblStory.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblStory.Location = new Point(31, 26);
-            lblStory.Margin = new Padding(52, 22, 52, 22);
+            lblStory.Location = new Point(35, 35);
+            lblStory.Margin = new Padding(59, 29, 59, 29);
             lblStory.Name = "lblStory";
-            lblStory.Padding = new Padding(26, 22, 26, 22);
-            lblStory.Size = new Size(472, 202);
+            lblStory.Padding = new Padding(30, 29, 30, 29);
+            lblStory.Size = new Size(659, 343);
             lblStory.TabIndex = 1;
             lblStory.Text = "Story";
             lblStory.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnCopy
             // 
-            btnCopy.Location = new Point(340, 237);
+            btnCopy.Location = new Point(508, 388);
+            btnCopy.Margin = new Padding(3, 4, 3, 4);
             btnCopy.Name = "btnCopy";
-            btnCopy.Size = new Size(75, 23);
+            btnCopy.Size = new Size(86, 31);
             btnCopy.TabIndex = 2;
             btnCopy.Text = "Copy";
             btnCopy.UseVisualStyleBackColor = true;
@@ -73,9 +73,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(255, 237);
+            button1.Location = new Point(410, 388);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(79, 23);
+            button1.Size = new Size(90, 31);
             button1.TabIndex = 3;
             button1.Text = "Download";
             button1.UseVisualStyleBackColor = true;
@@ -85,24 +86,23 @@
             // 
             lblMessage.AutoSize = true;
             lblMessage.ForeColor = Color.Red;
-            lblMessage.Location = new Point(27, 238);
+            lblMessage.Location = new Point(30, 388);
             lblMessage.Name = "lblMessage";
-            lblMessage.Size = new Size(53, 15);
+            lblMessage.Size = new Size(67, 20);
             lblMessage.TabIndex = 4;
             lblMessage.Text = "Message";
             // 
             // StoryForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(534, 268);
+            ClientSize = new Size(731, 428);
             Controls.Add(lblMessage);
             Controls.Add(button1);
             Controls.Add(btnCopy);
             Controls.Add(lblStory);
             Controls.Add(btnExit);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "StoryForm";
             Text = "Story";
