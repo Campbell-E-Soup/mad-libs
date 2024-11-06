@@ -10,7 +10,6 @@ namespace Mad_Libs_App.Classes
     internal class MadLib
     {
         public List<Word> WordList { get; set; }
-
         private string Story { get; set; } = string.Empty;
         public string FinishedStory {  get; set; } = string.Empty;
         public int index { get; set; } = 0;
@@ -43,7 +42,7 @@ namespace Mad_Libs_App.Classes
                     //use all types in examples to determine the bracketed word is valid
                     foreach (string type in Word.Examples.Keys)
                     {
-                        if (word.Contains($"[{type}]"))
+                        if (word.ToLower().Contains($"[{type}]"))
                         {
                             WordList.Add(new Word(word,type));
                             break;
@@ -65,11 +64,12 @@ namespace Mad_Libs_App.Classes
             {
                 if (WordList.Count > 0)
                 {
+                    string word = words[i].ToLower();
                     //looping through story in the same order as we created wordlist, so the oldest word in the list will always be at zero.
-                    if (words[i].Contains($"[{WordList[0].Type}]"))
+                    if (word.Contains($"[{WordList[0].Type}]"))
                     {
                         string suffix = "", prefix = "";
-                        string str = words[i];
+                        string str = word;
 
                         //beginning punc.
                         if (!str.StartsWith('['))
