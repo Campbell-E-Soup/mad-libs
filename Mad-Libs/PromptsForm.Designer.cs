@@ -1,6 +1,6 @@
 ﻿namespace Mad_Libs_App
 {
-    partial class Prompts
+    partial class PromptsForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblPrompt = new Label();
             btnNext = new Button();
             txtWord = new TextBox();
             lblReminder = new Label();
+            hideTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // lblPrompt
             // 
             lblPrompt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPrompt.Location = new Point(12, 9);
+            lblPrompt.Location = new Point(11, 9);
             lblPrompt.Name = "lblPrompt";
             lblPrompt.Size = new Size(351, 64);
             lblPrompt.TabIndex = 0;
@@ -57,28 +59,33 @@
             // 
             // txtWord
             // 
-            txtWord.Location = new Point(82, 126);
+            txtWord.Location = new Point(82, 125);
             txtWord.Name = "txtWord";
-            txtWord.Size = new Size(208, 27);
+            txtWord.Size = new Size(207, 27);
             txtWord.TabIndex = 2;
             txtWord.TextChanged += txtWord_TextChanged;
             // 
             // lblReminder
             // 
             lblReminder.ForeColor = SystemColors.GrayText;
-            lblReminder.Location = new Point(12, 73);
+            lblReminder.Location = new Point(11, 73);
             lblReminder.Name = "lblReminder";
-            lblReminder.Size = new Size(351, 46);
+            lblReminder.Size = new Size(351, 45);
             lblReminder.TabIndex = 3;
             lblReminder.Text = "Reminder";
             lblReminder.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // hideTimer
+            // 
+            hideTimer.Interval = 1;
+            hideTimer.Tick += hideTimer_Tick;
             // 
             // Prompts
             // 
             AcceptButton = btnNext;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(375, 214);
+            ClientSize = new Size(375, 213);
             Controls.Add(lblReminder);
             Controls.Add(txtWord);
             Controls.Add(btnNext);
@@ -98,5 +105,6 @@
         private Button btnNext;
         private TextBox txtWord;
         private Label lblReminder;
+        private System.Windows.Forms.Timer hideTimer;
     }
 }
