@@ -4,11 +4,11 @@ using System.Text.RegularExpressions;
 
 namespace Mad_Libs_App
 {
-    public partial class Prompts : Form
+    public partial class PromptsForm : Form
     {
         MadLib? madlib;
         Word? Replacer;
-        public Prompts()
+        public PromptsForm()
         {
             InitializeComponent();
         }
@@ -74,9 +74,15 @@ namespace Mad_Libs_App
 
         private bool answerValidation(string s)
         {
-            if (!Regex.IsMatch(s, @"^[a-zA-Z\s]+$")) { return false; }
-            if (s.Count(char.IsLetter) < 3) { return false; }
-
+            if (Replacer.Type != "num")
+            {
+                if (!Regex.IsMatch(s, @"^[a-zA-Z\s]+$")) { return false; }
+                if (s.Count(char.IsLetter) < 3) { return false; }
+            }
+            else
+            {
+                if (!Regex.IsMatch(s, @"^[a-zA-Z0-9\s]+$")) { return false; }
+            }
             return true;
         }
 
