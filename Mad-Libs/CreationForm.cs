@@ -44,7 +44,7 @@ namespace Mad_Libs_App
             getFile.InitialDirectory = filePath;
             if (getFile.ShowDialog() == DialogResult.OK)
             {
-                String customStory = "{Custom, " + txtTag.Text+"} "+ txtStory.Text;
+                String customStory = "{Custom, " + txtTag.Text + "} " + txtStory.Text;
                 IOSystem.AppendToFile(getFile.FileName, customStory);
             }
         }
