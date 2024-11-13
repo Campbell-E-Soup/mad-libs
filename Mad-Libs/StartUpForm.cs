@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace Mad_Libs_App
 {
-	public partial class StartUp : Form
+	public partial class StartUpForm : Form
 	{
 		string notSorted = "";
 		StoryList Stories;
-		public StartUp()
+		public StartUpForm()
 		{
 			InitializeComponent();
 		}
@@ -81,7 +81,7 @@ namespace Mad_Libs_App
 				//get a random story from the list.
 				Random rand = new Random();
 				string str = stories[rand.Next(stories.Count)].Str;
-				Prompts prmpt = new Prompts();
+				PromptsForm prmpt = new PromptsForm();
 				prmpt.Tag = str;
                 this.Hide();
                 prmpt.Closed += (s, args) => this.Show();

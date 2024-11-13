@@ -1,6 +1,6 @@
 ﻿namespace Mad_Libs_App
 {
-	partial class StartUp
+	partial class StartUpForm
 	{
 		/// <summary>
 		/// Required designer variable.

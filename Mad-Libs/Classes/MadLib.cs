@@ -10,9 +10,9 @@ namespace Mad_Libs_App.Classes
     internal class MadLib
     {
         public List<Word> WordList { get; set; }
-        private string Story { get; set; } = string.Empty;
-        public string FinishedStory {  get; set; } = string.Empty;
-        public int index { get; set; } = 0;
+        private string Story { get; set; } = string.Empty; // The story with keys.
+        public string FinishedStory {  get; set; } = string.Empty; // The story with all keys replaced.
+        private int index { get; set; } = 0;
 
         public MadLib(string str) 
         {
@@ -32,7 +32,7 @@ namespace Mad_Libs_App.Classes
         }
         public void Load()
         {
-            //create wordlist
+            //create wordlist from Story
             if (WordList == null) { WordList = new List<Word>(); }
             if (Story == string.Empty) { return; }
             foreach (string word in Story.ToLower().Split(' '))
@@ -66,7 +66,7 @@ namespace Mad_Libs_App.Classes
                 {
                     string word = words[i].ToLower();
                     //looping through story in the same order as we created wordlist, so the oldest word in the list will always be at zero.
-                    if (word.Contains($"[{WordList[0].Type}]"))
+                    if (word.Contains($"[{WordList[0].Type}]")) // Replaces the first valid type for the first entry in word list.
                     {
                         string suffix = "", prefix = "";
                         string str = word;
