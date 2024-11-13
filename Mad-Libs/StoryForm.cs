@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Mad_Libs_App.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,13 +55,13 @@ namespace Mad_Libs_App
                 }
             }
             saveFileDialog.InitialDirectory = filePath;
-            saveFileDialog.FileName = "saved_madlib.txt";
+            
             //Lets user know save was successful 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 try
                 {   //saving to a .txt file 
-                    File.WriteAllText(saveFileDialog.FileName, lblStory.Text);
+                    IOSystem.AppendToFile(saveFileDialog.FileName, lblStory.Text);
                     lblMessage.ForeColor = SystemColors.ControlDark;
                     lblMessage.Text = "Story saved successfully!";
                 }
