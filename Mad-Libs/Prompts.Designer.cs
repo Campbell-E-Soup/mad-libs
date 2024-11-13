@@ -36,10 +36,11 @@
             // 
             // lblPrompt
             // 
-            lblPrompt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPrompt.Location = new Point(12, 9);
+            lblPrompt.BackColor = Color.FromArgb(238, 189, 138);
+            lblPrompt.Font = new Font("KimsBitHand", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPrompt.Location = new Point(10, 9);
             lblPrompt.Name = "lblPrompt";
-            lblPrompt.Size = new Size(351, 64);
+            lblPrompt.Size = new Size(307, 48);
             lblPrompt.TabIndex = 0;
             lblPrompt.Text = "MadLib";
             lblPrompt.TextAlign = ContentAlignment.MiddleCenter;
@@ -47,9 +48,10 @@
             // btnNext
             // 
             btnNext.Enabled = false;
-            btnNext.Location = new Point(137, 173);
+            btnNext.Location = new Point(133, 145);
+            btnNext.Margin = new Padding(3, 2, 3, 2);
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(94, 29);
+            btnNext.Size = new Size(82, 22);
             btnNext.TabIndex = 1;
             btnNext.Text = "Submit";
             btnNext.UseVisualStyleBackColor = true;
@@ -57,18 +59,24 @@
             // 
             // txtWord
             // 
-            txtWord.Location = new Point(82, 126);
+            txtWord.BackColor = Color.FromArgb(238, 189, 138);
+            txtWord.BorderStyle = BorderStyle.FixedSingle;
+            txtWord.Font = new Font("KimsBitHand", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtWord.Location = new Point(72, 93);
+            txtWord.Margin = new Padding(3, 2, 3, 2);
             txtWord.Name = "txtWord";
-            txtWord.Size = new Size(208, 27);
+            txtWord.Size = new Size(182, 21);
             txtWord.TabIndex = 2;
             txtWord.TextChanged += txtWord_TextChanged;
             // 
             // lblReminder
             // 
+            lblReminder.BackColor = Color.FromArgb(238, 189, 138);
+            lblReminder.Font = new Font("KimsBitHand", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblReminder.ForeColor = SystemColors.GrayText;
-            lblReminder.Location = new Point(12, 73);
+            lblReminder.Location = new Point(12, 57);
             lblReminder.Name = "lblReminder";
-            lblReminder.Size = new Size(351, 46);
+            lblReminder.Size = new Size(307, 34);
             lblReminder.TabIndex = 3;
             lblReminder.Text = "Reminder";
             lblReminder.TextAlign = ContentAlignment.MiddleCenter;
@@ -76,14 +84,18 @@
             // Prompts
             // 
             AcceptButton = btnNext;
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(375, 214);
+            BackColor = Color.FromArgb(238, 189, 138);
+            BackgroundImageLayout = ImageLayout.None;
+            ClientSize = new Size(329, 178);
             Controls.Add(lblReminder);
             Controls.Add(txtWord);
             Controls.Add(btnNext);
             Controls.Add(lblPrompt);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "Prompts";
             Text = "Mad Libs";
