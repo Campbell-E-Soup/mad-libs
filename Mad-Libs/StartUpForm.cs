@@ -95,6 +95,8 @@ namespace Mad_Libs_App
 
 		private void btnLoad_Click(object sender, EventArgs e)
 		{
+			//assure no errors when new tags are loaded
+				cboSortBy.SelectedIndex = 0;
 			//load in a file stored on device
 			OpenFileDialog openFileDialog = new OpenFileDialog();
 			openFileDialog.Filter = "Text Files (*.txt)|*.txt";

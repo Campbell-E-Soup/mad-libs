@@ -71,8 +71,8 @@ namespace Mad_Libs_App.Classes
 				string? o = sr.ReadLine();
 				while (o != null)
 				{
-					o = o.Replace("#br#","\n");
-					output.Add(o);
+					o = o.Replace("#br#"," \n");
+					output.Add(o.Trim());
 					o = sr.ReadLine();
 				}
 				sr.Close();
@@ -94,8 +94,8 @@ namespace Mad_Libs_App.Classes
 				string? o = sr.ReadLine();
 				while (o != null)
 				{
-                    o = o.Replace("#br#", "\n");
-                    output.Add(o);
+                    o = o.Replace("#br#", " \n");
+                    output.Add(o.Trim());
 					o = sr.ReadLine();
 				}
 				sr.Close();

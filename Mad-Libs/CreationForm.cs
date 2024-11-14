@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mad_Libs_App.Classes;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Mad_Libs_App
 {
@@ -20,8 +21,7 @@ namespace Mad_Libs_App
 
         private void cboAdd_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String s = txtStory.Text.Trim() + " " + cboAdd.Text + " ";
-            txtStory.Text = s;
+            insertText(cboAdd.Text);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -47,6 +47,41 @@ namespace Mad_Libs_App
                 String customStory = "{Custom, " + txtTag.Text + "} " + txtStory.Text;
                 IOSystem.AppendToFile(getFile.FileName, customStory);
             }
+        }
+
+        private void txtStory_Enter(object sender, EventArgs e)
+        {
+            if (txtStory.ForeColor == SystemColors.GrayText)
+            {
+                txtStory.Text = String.Empty;
+                txtStory.ForeColor = SystemColors.WindowText;
+            }
+        }
+
+        private void insertText(string text)
+        {
+            String s = txtStory.Text + " " + text + " ";
+            txtStory.Text = s.Trim();
+        }
+
+        private void btnNoun_Click(object sender, EventArgs e)
+        {
+            insertText("[noun]");
+        }
+
+        private void btnVerb_Click(object sender, EventArgs e)
+        {
+            insertText("[verb]");
+        }
+
+        private void btnAdj_Click(object sender, EventArgs e)
+        {
+            insertText("[adj]");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            insertText("[adv]");
         }
     }
 }
