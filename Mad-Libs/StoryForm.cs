@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Mad_Libs_App.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,12 +37,13 @@ namespace Mad_Libs_App
             lblMessage.Text = "Story copied to clipboard!";
         }
 
+        //button for downloading finished madlib to desktop 
         private void DownloadButton_Click(object sender, EventArgs e)
-        {
+        {   //dialog showing location where user can save .txt file 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Text Files (*.txt)|*.txt";
 
-            //saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            //determine directory to save file 
             string filePath;
             filePath = Path.Combine(AppContext.BaseDirectory, "Text Files");
             if (!Directory.Exists(filePath))
@@ -52,16 +55,17 @@ namespace Mad_Libs_App
                 }
             }
             saveFileDialog.InitialDirectory = filePath;
-            saveFileDialog.FileName = "saved_madlib.txt";
-
+            
+            //Lets user know save was successful 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 try
-                {
-                    File.WriteAllText(saveFileDialog.FileName, lblStory.Text);
+                {   //saving to a .txt file 
+                    IOSystem.AppendToFile(saveFileDialog.FileName, lblStory.Text);
                     lblMessage.ForeColor = SystemColors.ControlDark;
                     lblMessage.Text = "Story saved successfully!";
                 }
+                //Lets user know if save had issues 
                 catch (Exception ex)
                 {
                     lblMessage.ForeColor = Color.Red;

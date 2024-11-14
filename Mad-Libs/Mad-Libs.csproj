@@ -10,10 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Text Files\default.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="Text Files\default.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

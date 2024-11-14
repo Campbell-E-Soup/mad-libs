@@ -16,13 +16,6 @@ namespace Mad_Libs_App
         private void Prompts_Load(object sender, EventArgs e)
         {
             string str = "One [adj] day, I was walking my [color] pet [noun] when [pnoun] started flying from the sky! I called my friend [name] and she said one just landed right on her [place]! [adv], it was raining [pnoun] as well and they were just going everywhere! My [noun] started [ving] and catching [pnoun] with his mouth to eat!";
-            //str = "this story has nothing to replace";
-            //str = "Noun: [noun], Adjective: [adj], Verb: [verb], Ving: [ving], Adverb: [adv], Place: [place], Person: [person], Plural Noun: [pnoun], Name: [pname], Color: [color], Body Part: [body], Plural Body Part: [pbody], Food: [food], Exclamation: [exc]";
-
-            
-
-            //StoryList stories = new StoryList();
-            //str = stories.Stories[0].Str;
             if (Tag !=  null)
             {
                 str = Tag.ToString();
@@ -74,9 +67,17 @@ namespace Mad_Libs_App
 
         private bool answerValidation(string s)
         {
+            if (Replacer.Type != "num")
+            {
+                if (!Regex.IsMatch(s, @"^[a-zA-Z\s]+$")) { return false; }
+                if (s.Count(char.IsLetter) < 3) { return false; }
+            }
+            else
+            {
+                if (!Regex.IsMatch(s, @"^[a-zA-Z0-9\s]+$")) { return false; }
+            }
             if (!Regex.IsMatch(s, @"^[a-zA-Z\s]+$")) { return false; }
             if (s.Count(char.IsLetter) < 3) { return false; }
-
             return true;
         }
 
