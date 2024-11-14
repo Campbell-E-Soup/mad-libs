@@ -40,10 +40,12 @@ namespace Mad_Libs_App
                     filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 }
             }
+            //saving custom madlib into folder w/ story and tags
             getFile.InitialDirectory = filePath;
             if (getFile.ShowDialog() == DialogResult.OK)
             {
-                IOSystem.AppendToFile(getFile.FileName, txtStory.Text);
+                String customStory = "{Custom, " + txtTag.Text + "} " + txtStory.Text;
+                IOSystem.AppendToFile(getFile.FileName, customStory);
             }
         }
     }
