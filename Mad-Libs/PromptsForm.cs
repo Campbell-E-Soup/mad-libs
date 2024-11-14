@@ -76,6 +76,8 @@ namespace Mad_Libs_App
             {
                 if (!Regex.IsMatch(s, @"^[a-zA-Z0-9\s]+$")) { return false; }
             }
+            if (!Regex.IsMatch(s, @"^[a-zA-Z\s]+$")) { return false; }
+            if (s.Count(char.IsLetter) < 3) { return false; }
             return true;
         }
 
