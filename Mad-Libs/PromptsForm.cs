@@ -4,11 +4,11 @@ using System.Text.RegularExpressions;
 
 namespace Mad_Libs_App
 {
-    public partial class Prompts : Form
+    public partial class PromptsForm : Form
     {
         MadLib? madlib;
         Word? Replacer;
-        public Prompts()
+        public PromptsForm()
         {
             InitializeComponent();
         }

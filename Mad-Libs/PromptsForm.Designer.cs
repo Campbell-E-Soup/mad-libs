@@ -1,6 +1,6 @@
 ﻿namespace Mad_Libs_App
 {
-    partial class Prompts
+    partial class PromptsForm
     {
         /// <summary>
         ///  Required designer variable.
