@@ -83,5 +83,10 @@ namespace Mad_Libs_App
         {
             insertText("[adv]");
         }
+
+        private void CreationForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

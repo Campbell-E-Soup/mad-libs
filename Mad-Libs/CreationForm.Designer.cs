@@ -161,6 +161,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "CreationForm";
             Text = "Create a MadLib!";
+            Load += CreationForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
