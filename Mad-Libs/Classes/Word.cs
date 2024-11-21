@@ -11,7 +11,8 @@ namespace Mad_Libs_App.Classes
         public string Replace {  get; set; } = string.Empty;// The word to replace the key with.
         public string Type { get; set; } = string.Empty;// Used to check if a key is valid.
         public static Dictionary<string, string> Examples { get; set; }// Contains examples for words and keys that MadLib.cs uses to see of a word should be replaced.
-        private static Dictionary<string,string> ExtendType { get; set; }// Key extensions for short keys to readable English.
+        public static Dictionary<string,string> ExtendType { get; set; }// Key extensions for short keys to readable English.
+        public static Dictionary<string,string> UnExtendType { get; set; }//this is the inversise of extendType
         public Word(string replace, string type)
         {
             this.Replace = replace;
@@ -54,6 +55,19 @@ namespace Mad_Libs_App.Classes
                 {"pbody", "plural body part" },
                 {"exc", "exclamation" },
                 {"num", "number" }
+            };
+
+            UnExtendType = new Dictionary<string, string>
+            {
+                {"adjective","adj"},
+                {"verb ending in ing", "ving"},
+                {"plural noun","pnoun"},
+                {"adverb", "adv" },
+                {"person", "prsn"},
+                {"body part", "body"},
+                {"plural body part", "pbody"},
+                {"exclamation", "exc"},
+                {"number","num"}
             };
         }
 
