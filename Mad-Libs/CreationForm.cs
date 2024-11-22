@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,8 +22,14 @@ namespace Mad_Libs_App
 
         private void cboAdd_SelectedIndexChanged(object sender, EventArgs e)
         {
-            insertText(cboAdd.Text);
+            String temptype = cboAdd.Text;
+            if (Word.UnExtendType.Keys.Contains(temptype))
+            {
+                temptype = Word.UnExtendType[temptype];
+            }
+            insertText("[" +temptype+ "]");
         }
+        
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -82,6 +89,24 @@ namespace Mad_Libs_App
         private void button2_Click(object sender, EventArgs e)
         {
             insertText("[adv]");
+           
+        }
+
+        private void CreationForm_Load(object sender, EventArgs e)
+        {
+            string temptype;
+            cboAdd.Items.Clear();
+            //loop type dict check key value if 
+            foreach (string type in Word.Examples.Keys)
+            {
+                temptype = type;
+                if (Word.ExtendType.Keys.Contains(temptype))
+                {
+                    temptype = Word.ExtendType[temptype];
+                }
+                cboAdd.Items.Add(temptype);
+
+            }
         }
     }
 }
