@@ -55,8 +55,8 @@ The object that **Madlib.cs** uses to store information for blank spaces.<br/><b
 
 ### IOSystem.cs
 
+</details>
+
 ## Credits
 
 To be added
-
-</details>
