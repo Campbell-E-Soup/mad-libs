@@ -23,10 +23,11 @@ namespace Mad_Libs_App
         private void cboAdd_SelectedIndexChanged(object sender, EventArgs e)
         {
             String temptype = cboAdd.Text;
-            if (Word.UnExtendType.Keys.Contains(temptype))
+            if (Word.ExtendType.Values.Contains(temptype))
             {
-                temptype = Word.UnExtendType[temptype];
-            }
+                temptype = Word.ExtendType.FirstOrDefault(x => x.Value == temptype).Key;
+
+			}
             insertText("[" +temptype+ "]");
         }
         
