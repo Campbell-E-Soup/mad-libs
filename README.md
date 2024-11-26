@@ -87,10 +87,6 @@ It handles a collection of Story objects, it populates and displays them.<br/><b
 
 ### Madlibs.cs
 
-### Story.cs
-
-### Storylist.cs
-
 ### IOSystem.cs
 
 </details>
