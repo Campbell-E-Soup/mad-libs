@@ -57,14 +57,14 @@ It processes a line of text to extract tags and stores the remaining text as a s
 | Declaration | Description |
 | ----------- | ----------- |
 | public List<string> Tags { get; set; } | A list that stores all the tags extracted from the story text. |
-| public string Str { get; set; } = string.Empty; | The story text with the tags removed. |
+| public string Str { get; set; }| The story text with the tags removed. |
 
 **Methods:**<br/>
 | Declaration | Description |
 | ----------- | ----------- |
 | public override string ToString() | Creates a readable string that lists the tags and the story template. Useful for debugging or displaying the data. |
 
-### Storylist.cs
+### StoryList.cs
 It handles a collection of Story objects, it populates and displays them.<br/><br/>
 
 **Constructors:**<br/>
@@ -76,19 +76,27 @@ It handles a collection of Story objects, it populates and displays them.<br/><b
 **Properties:**<br/>
 | Declaration | Description |
 | ----------- | ----------- |
-| public List<Story> Stories { get; set; } | A list that stores Story objects. Holds all the stories created from the source. Can be used to retrieve or modify the list of stories in the StoryList. |
+| public List<[Story](#storycs)> Stories { get; set; } | A list that stores Story objects. Holds all the stories created from the source. Can be used to retrieve or modify the list of stories in the StoryList. |
 
 **Methods:**<br/>
 | Declaration | Description |
 | ----------- | ----------- |
 | public override string ToString() | Combines all stories in the list into one string. Each story is added on a new line to make it easier to read. |
 
-**The rest of the classes need to be finished**
-
 ### Madlibs.cs
 
 ### IOSystem.cs
+This class is used for reading and writing stories to a text file.<br/><br/>
 
+**Methods:**<br/>
+| Declaration | Description |
+| ----------- | ----------- |
+| public static string GetFirstString() | Returns the first line of 'default.txt' from the 'Text Files' folder. |
+| public static string GetFirstString(string filePath) | Returns the first line of the text file at the specified path. |
+| public static List<string> GetAllStrings() | Returns each line from 'default.txt' as a list of strings. |
+| public static List<string> GetAllStrings(string filePath) | Returns each line from the text file at the specified path as a list of strings. |
+| public static bool AppendToFile(string filePath, string appendLine) | Appends the string to the end of the text file at the specified path, returns true if saved successfully. |
+| public static bool AppendListToFile(string filePath, List<string> appendList) | Appends the list of string to the end of the text file at the specified path, returns true if saved successfully. |
 </details>
 
 ## Credits
