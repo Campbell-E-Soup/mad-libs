@@ -23,7 +23,7 @@ Made for CITC-2335
 <summary>Information on the project's classes</summary>
 
 ### Word.cs
-The object that **Madlib.cs** uses to store information for blank spaces.<br/><br/>
+The object that [Madlibs.cs](#madlibscs) uses to store information for blank spaces.<br/><br/>
 
 **Constructors:**<br/>
 | Declaration | Description |
@@ -36,7 +36,7 @@ The object that **Madlib.cs** uses to store information for blank spaces.<br/><b
 | ----------- | ----------- |
 | public string Replace { get; set; } | The word to replace the blank with. |
 | public string Type { get; set; } | The type of word (noun, adjective, etc.) |
-| public static Dictionary<string, string> Examples { get; set; } | A static dictionary containing examples of valid word types, used to determine which type of word should be replaced in **Madlib.cs**. |
+| public static Dictionary<string, string> Examples { get; set; } | A static dictionary containing examples of valid word types, used to determine which type of word should be replaced in [Madlibs.cs](#madlibscs). |
 | private static Dictionary<string, string> ExtendType { get; set; } | A static dictionary that provides more readable descriptions of word types (e.g., "adjective" for "adj"). |
 
 **Methods:**<br/>
