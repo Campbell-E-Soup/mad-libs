@@ -89,7 +89,7 @@ Generates a list of words to be replaced in story. Each blank space is represent
 **Constructors:**<br/>
 | Declaration | Description |
 | ----------- | ----------- |
-| public MadLib(string str) | Initializes a madlib object with 'Story' equal to 'str.' |
+| public MadLib(string str) | Initializes a MadLib object with 'Story' equal to 'str.' |
 
 **Properties:**<br/>
 | Declaration | Description |
@@ -122,4 +122,11 @@ This class is used for reading and writing stories to a text file.<br/><br/>
 
 ## Credits
 
-To be added
+### Created by:
+
+[alexpop80](https://github.com/alexpop80)<br/>
+[Campbell-E-Soup](https://github.com/Campbell-E-Soup)<br/>
+[cprine](https://github.com/cprine)<br/>
+[HarvestMint](https://github.com/HarvestMint)<br/>
+[JudyChavez](https://github.com/JudyChavez)<br/>
+[MorganRLowe](https://github.com/MorganRLowe)
