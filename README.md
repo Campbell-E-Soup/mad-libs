@@ -23,7 +23,7 @@ Made for CITC-2335
 <summary>Information on the project's classes</summary>
 
 ### Word.cs
-The object that [Madlibs.cs](#madlibscs) uses to store information for blank spaces.<br/><br/>
+The object that [MadLib.cs](#madlibcs) uses to store information for blank spaces.<br/><br/>
 
 **Constructors:**<br/>
 | Declaration | Description |
@@ -36,7 +36,7 @@ The object that [Madlibs.cs](#madlibscs) uses to store information for blank spa
 | ----------- | ----------- |
 | public string Replace { get; set; } | The word to replace the blank with. |
 | public string Type { get; set; } | The type of word (noun, adjective, etc.) |
-| public static Dictionary<string, string> Examples { get; set; } | A static dictionary containing examples of valid word types, used to determine which type of word should be replaced in [Madlibs.cs](#madlibscs). |
+| public static Dictionary<string, string> Examples { get; set; } | A static dictionary containing examples of valid word types, used to determine which type of word should be replaced in [MadLib.cs](#madlibcs). |
 | private static Dictionary<string, string> ExtendType { get; set; } | A static dictionary that provides more readable descriptions of word types (e.g., "adjective" for "adj"). |
 
 **Methods:**<br/>
@@ -83,7 +83,28 @@ It handles a collection of Story objects, it populates and displays them.<br/><b
 | ----------- | ----------- |
 | public override string ToString() | Combines all stories in the list into one string. Each story is added on a new line to make it easier to read. |
 
-### Madlibs.cs
+### MadLib.cs
+Generates a list of words to be replaced in story. Each blank space is represented by a key in [Word.cs's](#wordcs) Example dictionary, surrounded by brackets [ ].<br/><br/>
+
+**Constructors:**<br/>
+| Declaration | Description |
+| ----------- | ----------- |
+| public MadLib(string str) | Initializes a madlib object with 'Story' equal to 'str.' |
+
+**Properties:**<br/>
+| Declaration | Description |
+| ----------- | ----------- |
+| public List<Word> WordList { get; set; } | A list of [Words](#wordcs) for each valid key to be replaced in the 'Story' property. |
+| private string Story { get; set; } | A string that contains keys to be replaced. |
+| public string FinishedStory { get; set; } | 'Story' with all the keys replaced. |
+| private int index { get; set; } | The current position in 'WordList' to be replaced. |
+
+**Methods:**<br/>
+| Declaration | Description |
+| ----------- | ----------- |
+| public void Load() | Generates the 'WordList' for each key in 'Story.' |
+| public Word Next() | Returns the next [Word](#wordcs) in 'WordList.' Returns null at the end of the list. |
+| public void Finish() | Replaces each blank space for each [Word](#wordcs) in 'WordList.' |
 
 ### IOSystem.cs
 This class is used for reading and writing stories to a text file.<br/><br/>
