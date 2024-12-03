@@ -13,6 +13,7 @@ namespace Mad_Libs_App
 {
 	public partial class StartUpForm : Form
 	{
+		string? previousPath = null;
 		string notSorted = "";
 		StoryList Stories;
 		public StartUpForm()
@@ -117,6 +118,7 @@ namespace Mad_Libs_App
 			{
 				if (openFileDialog.FileName != null)
 				{
+					previousPath = openFileDialog.FileName;
 					Stories = new StoryList(openFileDialog.FileName);
 					UpdateDropBox(Stories);
 				}
@@ -128,7 +130,28 @@ namespace Mad_Libs_App
 			this.Hide();
             creationForm.Closed += (s, args) => this.Show();
             creationForm.ShowDialog();
-		}
+
+			/*after the creation form is closed.
+			reload the stories, as to make sure any 
+			changes that the user could have made
+			are reflected in the current StoryList.
+			
+			this does not work as intended when running 
+			the form from vs 2022,but it works as an exe so... 
+			good enough!
+			probably the file explorer is opening a differnt file 
+			than IOsystem opens as default.*/
+
+			cboSortBy.SelectedIndex = 0;
+			Stories = new StoryList();
+
+			if (previousPath != null)
+			{
+				Stories = new StoryList(previousPath);
+			}
+
+			UpdateDropBox(Stories);
+        }
 
 		/* | tooltips |
 		   V          V */
