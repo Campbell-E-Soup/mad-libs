@@ -14,7 +14,30 @@ Made for CITC-2335
 <summary>Information on how to use the app.</summary>
 
 #### How to use the app
-**This still needs to be done**<br/>This should have screenshots <br/> and information on how to do stuff!
+![MadLibs Main](https://github.com/user-attachments/assets/d46ab25f-627b-4d34-bd5b-fbbb0caa5796)<br/>
+This is the Main Menu of the Mad Libs App!<br/>
+From here you have the option to select a tag and randomly choose a prompt containing that tag, or directly selecting a prompt from a text file by selecting the "..." button.<br/>
+Furthermore, you can create a new MadLib with the Create Button!<br/>
+
+![MadLibs Create](https://github.com/user-attachments/assets/aed7a3b8-3090-4e72-89dc-07c786b2e0b6)<br/>
+Here you are prompted to begin writing your own custom MadLib!<br/>
+The buttons on the side cover common blank terms to place within your MadLib (these are the words users will be prompted to enter as they play the MadLib).<br/>
+
+![MadLibs Create Dropdown](https://github.com/user-attachments/assets/9da6add9-345e-4f0c-b77e-e8af86294da2)<br/>
+Additonal more obscure blank terms can be selected from the dropdown menu.<br/>
+Include Tags to add your MadLibn into your personal Library and it may be selected when a relevant tag is selected
+Closing the Create menu returns you to the Main Menu.<br/>
+
+![MadLibs Main test](https://github.com/user-attachments/assets/be0a0c84-a711-4d0e-abaf-cf1945b5955e)<br/>
+Lets try playing our test MadLib!<br/>
+
+![MadLibs Play](https://github.com/user-attachments/assets/0ea2e219-6499-414f-b610-66fc1b46d62e)<br/>
+After pressing Play, the user will be continually prompted to fill in the blanks for the MadLib, and preset the user with examples for each blank.<br/>
+
+![MadLibs Story](https://github.com/user-attachments/assets/1fb66edc-2724-49b6-975c-169d2ce285b1)<br/>
+After Completing your prompts you will be brought to the Story menu and your final Story will be visible!<br/>
+You can download the final story as a text file with the Download button, or copy the story to your Clipboard with the Copy button.<br/>
+Whenever you are finished looking at your Story, you can return to the Main Menu with the Exit button.<br/>
 </details>
 
 ### For Devs
