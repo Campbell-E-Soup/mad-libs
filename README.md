@@ -94,7 +94,7 @@ Generates a list of words to be replaced in story. Each blank space is represent
 **Properties:**<br/>
 | Declaration | Description |
 | ----------- | ----------- |
-| public List<Word> WordList { get; set; } | A list of [Words](#wordcs) for each valid key to be replaced in the 'Story' property. |
+| public List\<[Word](#wordcs)\> WordList { get; set; } | A list of [Words](#wordcs) for each valid key to be replaced in the 'Story' property. |
 | private string Story { get; set; } | A string that contains keys to be replaced. |
 | public string FinishedStory { get; set; } | 'Story' with all the keys replaced. |
 | private int index { get; set; } | The current position in 'WordList' to be replaced. |
