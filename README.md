@@ -24,7 +24,7 @@ Here you are prompted to begin writing your own custom MadLib!<br/>
 The buttons on the side cover common blank terms to place within your MadLib (these are the words users will be prompted to enter as they play the MadLib).<br/>
 
 ![MadLibs Create Dropdown](https://github.com/user-attachments/assets/9da6add9-345e-4f0c-b77e-e8af86294da2)<br/>
-Additonal more obscure blank terms can be selected from the dropdown menu.<br/>
+Additonally more obscure blank terms can be selected from the dropdown menu.<br/>
 Include Tags to add your MadLibn into your personal Library and it may be selected when a relevant tag is selected
 Closing the Create menu returns you to the Main Menu.<br/>
 
